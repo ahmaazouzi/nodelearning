@@ -19,10 +19,25 @@ a(function() {
 - This article mentions the event loop that it's responsible for making certain functions asycnrhonous, but I still don't know how to make a function asynchronous. All I can do is understand how async functions work and modify my code to accommodate their nonlinear behavior. Almost the only way I can truly directly  delay the execution of a function is through `setTimeout()` and its sister methods.
 
 ## Events:
--
+- The **event emitter**, whatever that is, is fundamental in using events. Using events of any sort in the node environment requires the use of the **`'events'`** module.
+- Events are more or less manifestations of the **observer design pattern** (also called publisher-subscriber pattern). Events allow ***you subscribe to things. You can say 'when X do Y'***. A good scenarios where events are used include a chat room with multiple listeners.
+- **`.on()`** in Node does the same thing as `addEventListener()` in browsers.
 
 ## Streams:
--
+- The `Stream` API is used by both the file system and network APIs. Both the file system and network APIs do the same job, they are IO devices. The `Stream` API allow the two to be treated the same. The [stream-handbook](https://github.com/substack/stream-handbook), recommended by the writer of this document we are trying to summarize here can help you get a deeper insight into the topic of steams.
 
-## Modules and NPM:
--
+## Modules:
+- Node core is made of a few modules centered around I/O operations, both filewise and networkwise. If you need custom modules of any kind, you can use NPM. The following command allows you to search NPM for packages using a keyword:
+```sh
+npm search gis
+```
+
+### Modular Development Workflow:
+- Most package managers install packages globally. NPM chooses to install packages locally by default. Global packages in Node are an anti-pattern, just like.
+
+### How `require` works:
+- It searches for a module in the current folder. If it doesn't find it, it searches the subfolders of the current folder. If it doesn't find it in the subfolders of the current folder, it searches the parent folders of the current folder until it reaches the top of the file system tree. however, it doesn't check the subfolders of any of the current's parent folders. If not found, it checks the node global module folders.
+
+
+
+
