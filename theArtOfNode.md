@@ -1,4 +1,4 @@
-# A Summary of ***The Art of Node*** by [Max Ogden](https://github.com/maxogden):
+# A Summary of ***[The Art of Node](https://github.com/maxogden/art-of-node)*** by [Max Ogden](https://github.com/maxogden):
 - Basically **Node** is a networked I/O tool. It is **asynchronous** and excells at **non-blocking I/O** operations.
 - There are several **modules** that come with Node called **Node Core**. These already a lot of I/O and non-I/O operations such as `fs`, `net`, `http`, `dgram`, `url`, `path`, `querystring`, `buffer`, etc.
 - Four fundamental concepts are crucial to understand Node and appreciate its power. These are: **callbacks**, **events**, **streams** and **modules**.
@@ -37,7 +37,3 @@ npm search gis
 
 ### How `require` works:
 - It searches for a module in the current folder. If it doesn't find it, it searches the subfolders of the current folder. If it doesn't find it in the subfolders of the current folder, it searches the parent folders of the current folder until it reaches the top of the file system tree. however, it doesn't check the subfolders of any of the current's parent folders. If not found, it checks the node global module folders.
-
-
-
-
