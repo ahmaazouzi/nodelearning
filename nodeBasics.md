@@ -59,4 +59,14 @@ const require('./log'); // import same directory
 const require('./somePath/log'); // import from subdirectory
 const require('../log'); // import from parent directory
 ```
-- Make the require a constant to not accidentally change it and make it unusable. 
+- Make the `require` a constant to not accidentally change it and make it unusable. 
+
+## Module Wrapper Function:
+- How does mode encapsulate data and functions. It simply wraps the code you write in a file inside a **module wrapper function** which is an **immediately invoked function expression** (**IIFE**) which follows this general structure:
+```javascript
+(function(exports, require, module, __filename, __dirname){
+	// The code you write in module goes here.
+})
+```
+
+                  

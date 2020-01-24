@@ -1,3 +1,4 @@
+
 function log(something){
 	console.log(something);
 }
