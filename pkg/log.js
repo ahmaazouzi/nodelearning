@@ -1,9 +1,8 @@
-
 function log(something){
 	console.log(something);
 }
-function logUpperCase(something){
+function logUC(something){
 	console.log(something.toUpperCase());
 }
-module.exports = log;
-// module.exports = logUpperCase;
+module.exports.log = log;
+module.exports.logUpperCase = logUC;

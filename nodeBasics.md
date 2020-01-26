@@ -41,13 +41,13 @@ Module {
 - Functions from the following revolutionary module that makes the typing of the long `console.log()` obsolete is exported with **`module.exports`**:
 ```javascript
 function log(something){
-	console.log(something);
+  console.log(something);
 }
 function logUC(something){
-	console.log(something.toUpperCase());
+  console.log(something.toUpperCase());
 }
 module.exports.log = log;
-module.exports.logUC = logUpperCase;
+module.exports.logUpperCase = logUC;
 ```
 - One little detail is that `module.exports.log = log` exports and object that the `log()` function is part of. To export the function `log()` directly, you'd use `module.exports = log` instead.
 - like a Java class or package, you'd keep private methods and variables which don't get exported. The variables and functions you'd export are equivalent to public members in Java.
