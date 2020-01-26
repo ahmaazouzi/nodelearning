@@ -1,3 +1,4 @@
+# Node Package Manager (NPM):
 ## Long vs Short Commands/Flags:
 - `npm -v` -> one hyphen and a letter
 - `npm --version` -> two hyphens and full word.
@@ -53,7 +54,21 @@ allows you to install version 3.5.5 (if such one exists) of the lodash library.
 | **`1.14.22`** | Installs the exact given version
 | **`*`** | Installs the latest version
 
-## Listing 
+## Global Modules:
+- To install a module globally, use the **`-g`** flag.
+- **`npm root -g`** allows you to find where global modules are installed.
+
+## Listing Modules:
+- **`npm ls`** or **`npm list`** show a list of installed modules. You can get a global version with **`-g`** flag as you already know.
+- **`npm ls --depth 0`** allows you to specify the depth of dependencies.
+
+## NPM Scripts:
+- scripts are similar to bash aliases. You can for examples specify a way to start your application in similar ways that react is started for example. an example would be:
+```json
+  "scripts": {
+    "start": "node index.js"
+  }
+```
 
 
 
