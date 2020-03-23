@@ -10,7 +10,7 @@
 	* **`gulp.src()`** points to source files
 	* **`gulp.dist()`** points to a destination directory
 	* **`gulp.watch`** runs a task when a source file changes.
-	* **`*gulp.series()`**runs a series of tasks in order.
+	* **`gulp.series()`**runs a series of tasks in order.
 
 ## Examples:
 - To log a simple message you'd use
